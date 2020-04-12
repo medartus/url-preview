@@ -23,7 +23,6 @@ app.get("/", (request, response) => {
 const previewController = require("./preview");
 app.use("/api/v1", previewController);
 
-
 app.use((err, req, res, next) => {
   handleError(err, res);
 });

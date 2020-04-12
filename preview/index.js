@@ -18,17 +18,18 @@ const metascraper = require('metascraper')([
     require('metascraper-spotify')(),
     require('metascraper-youtube')()
 ]);
-  
 
-router.get("/preview", async (req, res) => {
-
-    const { url } = req.query;
-    if(url==undefined) throw new ErrorHandler(400, "An url is required");
+router.get("/preview", async (req, res, next) => {
+    try {
+        const { url } = req.query;
+        if(url==undefined || url=="") throw new ErrorHandler(400, "An url is required");
     
-    const { body: html } = await got(url)
-    const metadata = await metascraper({ html, url })
-    res.send(metadata)
-
-});
+        const { body: html } = await got(url)
+        const metadata = await metascraper({ html, url })
+        res.send(metadata)
+    } catch (error) {
+        next(error)
+    }
+})
 
 module.exports = router;
