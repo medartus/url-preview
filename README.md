@@ -3,6 +3,8 @@
 
 Url preview is an API providing metadata from any webpage. This Node.js application is based on the [Metascraper](https://github.com/microlinkhq/metascraper) project. 
 
+You can get such data as : language, author, title, publisher, image, logo, description, etc.
+
 If you want to add some specific endpoints or scrap metadata that are not handled, don't hesitate to open an issue and contribute !
 
 ## How to use it ? 👩‍💻
