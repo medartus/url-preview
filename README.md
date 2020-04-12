@@ -19,6 +19,8 @@ Example : `https://url-preview.herokuapp.com/v1/preview?url=https%3A%2F%2Fwww.yo
 | :----------: | :---------------: |
 |     `url`    |    Url to scrap   |
 
+> Don't forger to [url encode](https://www.urlencoder.org/) the value you pass to the url parameter !
+
 #### Response
 
 Response body:
