@@ -46,4 +46,4 @@ Response body:
 
 Released under the MIT License.
 
-Maintained by [Marc-Etienne Dartus](https://www.linkedin.com/in/marcetiennedartus/) with help from [contributors](https://github.com/medartus/url-preview/graphs/contributors).
+Maintained by [Marc-Etienne Dartus](https://github.com/medartus) with help from [contributors](https://github.com/medartus/url-preview/graphs/contributors).
