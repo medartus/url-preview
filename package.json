@@ -19,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "got": "^10.7.0",
+    "markdown-js": "0.0.4",
     "metascraper": "^5.11.8",
     "metascraper-amazon": "^5.11.8",
     "metascraper-audio": "^5.11.8",

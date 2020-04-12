@@ -1,13 +1,15 @@
 const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
-const { handleError, ErrorHandler } = require("./helpers/error");
+const { handleError } = require("./helpers/error");
+const { generateDocs } = require("./docs");
 const app = express();
 
 var { PORT } = require("./config");
 
 module.exports = app;
 
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -15,11 +17,11 @@ app.use(cors());
 app.options("*", cors());
 
 app.get("/", (request, response) => {
-  response.send("Api works");
+  response.send(generateDocs());
 });
 
 const previewController = require("./preview");
-app.use("/v1", previewController);
+app.use("/api/v1", previewController);
 
 
 app.use((err, req, res, next) => {

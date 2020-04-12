@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const got = require('got');
+const { ErrorHandler } = require("../helpers/error");
 const metascraper = require('metascraper')([
     require('metascraper-amazon')(),
     require('metascraper-author')(),
@@ -22,6 +23,8 @@ const metascraper = require('metascraper')([
 router.get("/preview", async (req, res) => {
 
     const { url } = req.query;
+    if(url==undefined) throw new ErrorHandler(400, "An url is required");
+    
     const { body: html } = await got(url)
     const metadata = await metascraper({ html, url })
     res.send(metadata)
