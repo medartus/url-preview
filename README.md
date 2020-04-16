@@ -1,9 +1,8 @@
-
 # Url Preview 💻
 
-Url preview is an API providing metadata from any webpage.
+Url preview is an free API providing metadata, jsonld from any webpage. You can also get data to preview url like on facebook, linkedind or twitter.
 
-## How to use it ? 👩‍💻
+## Usage 👩‍💻
 
 You only have to do some http request to the api : `https://url-preview.herokuapp.com/api/v1`
 
