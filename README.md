@@ -25,8 +25,8 @@ Response body:
 ```json
 {
     "title":"Rick Astley - Never Gonna Give You Up (Video)",
-    "description":"Rick Astley's official music video for “Never Gonna Give You Up” Listen to Rick Astley: https://RickAstley.lnk.to/_listenYD Subscribe to the official Rick As...","
-    image":"https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "description":"Rick Astley's official music video for “Never Gonna Give You Up” Listen to Rick Astley: https://RickAstley.lnk.to/_listenYD Subscribe to the official Rick As...",
+    "image":"https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
     "domain":"www.youtube.com"
 }
 ```
