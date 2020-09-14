@@ -31,5 +31,4 @@ app.listen(port, () => {
   console.log(`Running on port ${port}`);
 });
 
-module.exports = app;
-module.exports.handler = serverless(app);
+module.exports = serverless(app);

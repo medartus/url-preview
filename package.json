@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "set ENVIRONMENT=dev& nodemon index.js"
+    "start": "node api.js",
+    "dev": "set ENVIRONMENT=dev& nodemon api.js",
+    "build": ""
   },
   "repository": {
     "type": "git",
