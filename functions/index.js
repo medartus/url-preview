@@ -1,15 +1,14 @@
 const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
+const serverless = require("serverless-http");
 const { handleError } = require("./helpers/error");
 const { generateDocs } = require("./docs");
 const app = express();
 
 var { PORT } = require("./config");
 
-module.exports = app;
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -27,7 +26,10 @@ app.use((err, req, res, next) => {
   handleError(err, res);
 });
 
-
-app.listen(PORT, () => {
-  console.log(`Running on port ${PORT}`);
+const port = PORT || 80;
+app.listen(port, () => {
+  console.log(`Running on port ${port}`);
 });
+
+module.exports = app;
+module.exports.handler = serverless(app);
