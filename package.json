@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node api.js",
-    "dev": "set ENVIRONMENT=dev& nodemon api.js",
-    "build": ""
+    "dev": "set ENVIRONMENT=dev& nodemon api.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +20,7 @@
     "express": "^4.17.1",
     "got": "^10.7.0",
     "kahaki": "0.0.2",
-    "markdown-js": "0.0.4",
-    "serverless-http": "^2.5.0"
+    "markdown-js": "0.0.4"
   },
   "bugs": {
     "url": "https://github.com/medartus/url-preview/issues"
