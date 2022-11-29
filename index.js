@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const { handleError } = require("./helpers/error");
 const { generateDocs } = require("./docs");
-const { getOrigin } = require("./middleware/origin");
+const { checkUrl } = require("./middleware/origin");
 const app = express();
 
 var { PORT } = require("./config");
@@ -20,7 +20,7 @@ app.get("/", (request, response) => {
 });
 
 const previewController = require("./preview");
-app.use("/api/v1", getOrigin, previewController);
+app.use("/api/v1", checkUrl, previewController);
 
 app.use((err, req, res, next) => {
   handleError(err, res);
